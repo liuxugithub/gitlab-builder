@@ -132,20 +132,20 @@ dependency 'runit'
 dependency 'go-crond'
 
 if Build::Check.include_ee?
-  dependency 'consul'
-  dependency 'pgbouncer-exporter'
+  #dependency 'consul'
+  #dependency 'pgbouncer-exporter'
   unless OhaiHelper.raspberry_pi?
-    dependency 'spamcheck'
-    dependency 'spam-classifier'
+    #dependency 'spamcheck'
+    #dependency 'spam-classifier'
   end
 end
-dependency 'alertmanager'
-dependency 'node-exporter'
-dependency 'redis-exporter'
-dependency 'postgres-exporter'
-dependency 'prometheus'
-dependency 'gitlab-exporter'
-dependency 'mattermost'
+# dependency 'alertmanager'
+# dependency 'node-exporter'
+# dependency 'redis-exporter'
+# dependency 'postgres-exporter'
+# dependency 'prometheus'
+# dependency 'gitlab-exporter'
+# dependency 'mattermost'
 
 # Components that depend on the contents of this repository tends to dirty the
 # cache frequently than vendored components.
@@ -171,9 +171,9 @@ dependency 'fast-stats'
 # Build GitLab components at the end because except for tag pipelines, we build
 # from `main`/`master`, and this can invalidate cache easily. Git is built from
 # gitaly sources, and hence falls under the same category.
-dependency 'gitlab-elasticsearch-indexer' if Build::Check.include_ee?
+# dependency 'gitlab-elasticsearch-indexer' if Build::Check.include_ee?
 
-dependency 'gitlab-kas'
+#dependency 'gitlab-kas'
 dependency 'gitlab-shell'
 dependency 'gitlab-pages'
 dependency 'git'
@@ -298,6 +298,12 @@ exclude 'embedded/lib/python*/**/*.exe'
 exclude 'embedded/lib/python*/**/*.whl'
 # Exclude setuptools from Python libraries. Only used for psycopg build.
 exclude 'embedded/lib/python*/site-packages/setuptools'
+
+exclude 'embedded/service/mattermost'
+exclude 'embedded/service/prometheus*'
+exclude 'embedded/service/gitlab-kas'
+exclude 'embedded/service/gitlab-elasticsearch-indexer'
+exclude 'embedded/service/spamcheck'
 
 # Enable signing packages
 package :rpm do

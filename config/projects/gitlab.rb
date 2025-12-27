@@ -125,11 +125,11 @@ dependency 'omnibus-gitlab-gems'
 dependency 'gitlab-selinux' if SELinuxDistroHelper.selinux_supported?
 dependency 'redis'
 dependency 'nginx'
-dependency 'chef-gem'
-dependency 'inspec-gem'
-dependency 'logrotate'
+#dependency 'chef-gem'
+#dependency 'inspec-gem'
+#dependency 'logrotate'
 dependency 'runit'
-dependency 'go-crond'
+#dependency 'go-crond'
 
 if Build::Check.include_ee?
   #dependency 'consul'
@@ -155,18 +155,18 @@ if Build::Check.include_ee?
   dependency 'gitlab-pg-ctl'
 end
 dependency 'gitlab-cookbooks'
-dependency 'chef-acme'
+#dependency 'chef-acme'
 dependency 'gitlab-ctl'
-dependency 'gitlab-psql'
-dependency 'gitlab-backup-cli'
-dependency 'gitlab-redis-cli'
-dependency 'gitlab-healthcheck'
-dependency 'gitlabsos'
+#dependency 'gitlab-psql'
+#dependency 'gitlab-backup-cli'
+#dependency 'gitlab-redis-cli'
+#dependency 'gitlab-healthcheck'
+#dependency 'gitlabsos'
 
 dependency 'gitlab-scripts'
 dependency 'gitlab-config-template'
 
-dependency 'fast-stats'
+#dependency 'fast-stats'
 
 # Build GitLab components at the end because except for tag pipelines, we build
 # from `main`/`master`, and this can invalidate cache easily. Git is built from
@@ -175,7 +175,7 @@ dependency 'fast-stats'
 
 #dependency 'gitlab-kas'
 dependency 'gitlab-shell'
-dependency 'gitlab-pages'
+#dependency 'gitlab-pages'
 dependency 'git'
 
 # `git-filter-repo` is a dependency of Gitaly. But placing it there will cause

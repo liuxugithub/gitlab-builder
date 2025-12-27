@@ -281,7 +281,7 @@ build do
   delete 'public/uploads'
 
   # Drop uncompressed sourcemap files. We will keep the gziped versions.
-  command "find public/assets/webpack -name '*.map' -type f -print -delete"
+  # command "find public/assets/webpack -name '*.map' -type f -print -delete"
 
   # Cleanup after bundle
   # Delete all .gem archives

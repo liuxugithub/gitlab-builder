@@ -166,6 +166,7 @@ dependency 'gitlab-ctl'
 dependency 'gitlab-scripts'
 dependency 'gitlab-config-template'
 
+#rust program
 #dependency 'fast-stats'
 
 # Build GitLab components at the end because except for tag pipelines, we build

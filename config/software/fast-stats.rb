@@ -37,12 +37,10 @@ build do
   # supported on all our platforms. On Ubuntu the plot command needs
   # libfreetype6-dev and libfontconfig1-dev.
   command %w[cargo build --release --no-default-features], cwd: cwd
-
   move 'target/release/fast-stats', dest_dir
-
   # Symlink the fast-stats binary for "gitlabsos --include-stats"
-  gitlabsos_bindir = "#{install_dir}/embedded/service/gitlabsos/bin"
-  mkdir gitlabsos_bindir
-  command %W[ln -sf #{dest_dir}/fast-stats #{gitlabsos_bindir}/fast-stats]
+  #gitlabsos_bindir = "#{install_dir}/embedded/service/gitlabsos/bin"
+  #mkdir gitlabsos_bindir
+  #command %W[ln -sf #{dest_dir}/fast-stats #{gitlabsos_bindir}/fast-stats]
   command %W[ln -sf #{dest_dir}/fast-stats #{install_dir}/embedded/bin/fast-stats]
 end

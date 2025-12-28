@@ -155,7 +155,7 @@ if Build::Check.include_ee?
   dependency 'gitlab-pg-ctl'
 end
 dependency 'gitlab-cookbooks'
-#dependency 'chef-acme'
+dependency 'chef-acme'
 dependency 'gitlab-ctl'
 #dependency 'gitlab-psql'
 #dependency 'gitlab-backup-cli'

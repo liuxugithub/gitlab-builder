@@ -151,7 +151,7 @@ end
 # cache frequently than vendored components.
 if Build::Check.include_ee?
   dependency 'gitlab-ctl-ee'
-  dependency 'gitlab-geo-psql'
+  # dependency 'gitlab-geo-psql'
   dependency 'gitlab-pg-ctl'
 end
 dependency 'gitlab-cookbooks'

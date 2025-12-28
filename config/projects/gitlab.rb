@@ -127,7 +127,7 @@ dependency 'redis'
 dependency 'nginx'
 dependency 'chef-gem'
 dependency 'inspec-gem'
-dependency 'logrotate'
+#dependency 'logrotate'
 dependency 'runit'
 #dependency 'go-crond'
 

@@ -122,7 +122,7 @@ end
 
 dependency 'cacerts'
 dependency 'omnibus-gitlab-gems'
-dependency 'gitlab-selinux' if SELinuxDistroHelper.selinux_supported?
+#dependency 'gitlab-selinux' if SELinuxDistroHelper.selinux_supported?
 dependency 'redis'
 dependency 'nginx'
 dependency 'chef-gem'
@@ -157,7 +157,7 @@ end
 dependency 'gitlab-cookbooks'
 dependency 'chef-acme'
 dependency 'gitlab-ctl'
-#dependency 'gitlab-psql'
+dependency 'gitlab-psql'
 #dependency 'gitlab-backup-cli'
 #dependency 'gitlab-redis-cli'
 #dependency 'gitlab-healthcheck'
@@ -195,7 +195,7 @@ dependency 'git-filter-repo'
 # https://github.com/chef/omnibus/blob/master/docs/Build%20Cache.md
 dependency 'gitlab-rails'
 dependency 'gitaly'
-dependency 'ruby-grpc' if Build::Check.use_system_ssl?
+#dependency 'ruby-grpc' if Build::Check.use_system_ssl?
 
 # Package scripts
 dependency 'package-scripts'
